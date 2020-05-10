@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Model Analysis</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light"><!-- start navbar -->
+      <a class="navbar-brand" href="/analysis">Model Analysis</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Navigate
+            </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <a class="dropdown-item" href="/">Home</a>
+               <a class="dropdown-item" href="/analysis">Model Analysis</a>
+             </div>
+         </ul>
+      </div>
+    </nav><!--end navbar -->
+
+<div class="container-fluid">
+    <div class="row"><!--Body Content-->
+
+        <div class="col-md-7"><!-- MAIN CONTENT -->
+          <div class="container-fluid" id="main">
+            <h2>Visuals</h2>
+
+            <div class = "container-fluid" >
+
+                <img class="visualizations" height="300" width="500" src="../static/images/predict_acc.jpg">
+
+
+                <img class="visualizations" height="300" width="500" src="../static/images/patientages.jpg">
+
+
+                <img class="visualizations" height="250" width="300" src="../static/images/genders.jpg">
+
+
+                <img class="visualizations" height="300" width="500" src="../static/images/diagnosesgender.jpg">
+
+
+                <img class="visualizations" height="300" width="500" src="../static/images/predict_acc.jpg">
+
+            </div>
+
+
+        </div>
+        </div><!--END MAIN CONTENT -->
+
+        <div class="col-md-5"><!-- SIDE BAR -->
+          <div class="container-fluid" id="visual">
+          <div class="teampictures">
+          <h2>Team Members</h2>
+
+         <div class = "row">
+            <div class="col-md-4">
+              <div class="hvrbox">
+              <img id="avatar" height="175" width="175" src="../static/images/romy.jpeg" alt="Avatar" class="hvrbox-layer_bottom">
+              <div class="hvrbox-layer_top">
+              <a href="https://github.com/RomyRobi" target="_blank"><div class="hvrbox-text">Romy</div></a>
+            </div>
+            </div>
+          </div>
+            <div class="col-md-4">
+              <div class="hvrbox">
+              <img id="avatar" height="175" width="175" src="../static/images/adam.jpeg" alt="Avatar" class="hvrbox-layer_bottom">
+              <div class="hvrbox-layer_top">
+                <a href="https://adebruler.github.io/ADeBruler-DataAnalyst/" target="_blank"><div class="hvrbox-text">Adam</div></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="hvrbox">
+          <img id="avatar" height="175" width="175" src="../static/images/meghana.jpg" alt="Avatar" class="hvrbox-layer_bottom">
+          <div class="hvrbox-layer_top">
+            <a href="https://github.com/mbhimasani" target="_blank"><div class="hvrbox-text">Meghana</div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+          <div class = "row">
+             <div class="col-md-4">
+               <div class="hvrbox">
+               <img id="avatar" height="175" width="175" src="../static/images/mattcole.jpg" alt="Avatar" class="hvrbox-layer_bottom">
+               <div class="hvrbox-layer_top">
+               <a href="https://github.com/matthewcoleka" target="_blank"><div class="hvrbox-text">Matt</div></a>
+               </div>
+             </div>
+           </div>
+             <div class="col-md-4">
+               <div class="hvrbox">
+               <img id="avatar" height="175" width="175" src="../static/images/jimmy.jpg" alt="Avatar" class="hvrbox-layer_bottom">
+               <div class="hvrbox-layer_top">
+               <a href="https://github.com/minqiuyu" target="_blank"><div class="hvrbox-text">Jimmy</div></a>
+             </div>
+           </div>
+         </div>
+             <div class="col-md-4">
+               <div class="hvrbox">
+               <img id="avatar" height="175" width="175" src="../static/images/andres.jpg" alt="Avatar" class="hvrbox-layer_bottom">
+               <div class="hvrbox-layer_top">
+               <a href="https://github.com/AndresgPotdevin" target="_blank"><div class="hvrbox-text">Andres</div></a>
+             </div>
+             </div>
+           </div>
+
+
+
+         </div>
+        </div><!-- END SIDE BAR -->
+        <div class="info">
+        <h2>Overview</h2> <p>As part of our final project at the Data Science and Analytics Bootcamp at Georgia Tech, we decided to create and train a neural network using the Skin Cancer MNIST: HAM10000 dataset found on Kaggle. The dataset consists of 10,015 dermatoscopic images from different populations, with parameters of lesion_id, image_id, diagnosis (dx), diagnosis type (dx_type), age, sex, and localization of lesion.</p>
+
+  <h2>Process</h2> <p>We used Amazon AWS RDS MySQL to host our database and AWS EC2 to create a server for our web application. We created 2 models that trained sequentially - the first is an image classification model using the skin lesion images that results in 7 outputs of dx; the second is a logistic regression model that trained on the outputs of the first model and the parameters (age, sex, localization of lesion).</p>
+
+  <h2>Kaggle Dataset</h2> <p>https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000</p>
+
+  <h2>Original Data Source</h2>  <p>https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T • Tschandl, P., Rosendahl, C. & Kittler, H. The HAM10000 dataset, a large collection of multi-source dermatoscopic images of common pigmented skin lesion. Sci. Data 5, 180161 (2018). doi: 10.1038/sdata.2018.161</p>
+</div>
+
+      </div>
+
+    </div><!-- End Body Content -->
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
