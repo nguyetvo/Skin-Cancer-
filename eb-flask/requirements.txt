@@ -24,7 +24,7 @@ Keras-Preprocessing==1.0.9
 Markdown==3.0.1
 MarkupSafe==1.1.0
 mysqlclient==1.4.2
-numpy==1.16.1
+numpy==1.22.0
 pandas==0.24.1
 pathspec==0.5.5
 pillow==5.4.1
